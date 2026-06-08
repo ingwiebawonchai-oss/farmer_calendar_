@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Thai:wght@100..900&display=swap');
+
+
+@media print {
+  body {
+    overflow: hidden;
+    display: none !important;
+  }
+}
+
+
+*{
+    user-select: none;
+    -webkit-user-select: none;
+    transition: all 0.3s ease;
+}
+
+
+body{
+    background-attachment: fixed;
+    background-image: url('background.gif');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4%;
+    background-color: #f0f0f0;
+}
+
+
+.liquid-glass {
+  width: 50vh;
+  height: 65vh;
+  position: relative;
+  isolation: isolate;
+  border-radius: 56.00000000000001px;
+  box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+.liquid-glass:focus {
+  outline: none;
+}
+
+.liquid-glass::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: 56.00000000000001px;
+  box-shadow: inset 0 0 50px -5px #ffffff;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.liquid-glass::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: 56.00000000000001px;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  filter: url(#glass-distortion);
+  -webkit-filter: url(#glass-distortion);
+}
+
+/**/
+
+.liquid-glass2 {
+  width: 50vh;
+  height: 13vh;
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 3vh;
+}
+
+.liquid-glass2:focus {
+  outline: none;
+}
+
+.liquid-glass2::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.green{color: #D1E995;box-shadow: 0px 6px 24px black;}
+.yellow{color: #FFD700;box-shadow: 0px 6px 24px black;}
+.blue{color: #75BDEF;box-shadow: 0px 6px 24px black;}
+
+
+.liquid-glass2::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  filter: url(#glass-distortion);
+  -webkit-filter: url(#glass-distortion);
+}
+
+
+/*css of calendar*/
+
+.calendar-header{
+    position: absolute;
+    font-size: 2.8vh;
+    font-weight: bold;
+    top: 7vh;
+    left: 7vh;
+    color:black;
+    text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.5);
+}
+
+.calendar-day{
+    position: inherit;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 45vh;
+    height: 50vh;
+    gap:2%;
+    margin-top: 2.5vh;
+    border-radius: 10%;
+    box-shadow: inset 0 5px 10px rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.calendar-cell{
+    position: relative;
+    cursor: pointer;
+    margin-top:2.8vh;
+    color: black;
+}
+
+.calendar-cell:hover{
+    color: #FFD700;
+    text-shadow: 2px 2px 5px #FFD700;
+}
+
+.calendar-cell:active{
+    color: #FFD700;
+    text-shadow: 2px 2px 5px #FFD700;
+}
+
+
+
+#currentday{
+    color: #FFD700;
+    font-weight: bold;
+    text-shadow: 0px 0px 5px white;
+}
+#currentday::after{
+    content:' Today';
+    color:#FFD700;
+    text-shadow: 0px 0px 5px white;
+}
+
+.btn{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 2.3vh;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.3);
+}
+
+
+input{
+    z-index: 1;
+    padding: 0.7vh;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 2.3vh;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.3);
+}
+
+#updatebtn{
+    z-index: 1;
+    padding: 0.7vh;
+    border-radius: 5px;
+    border: none;
+    background-color: black;
+    color: white;
+    font-size: 2.3vh;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.3);
+    margin-top: 1.4vh;
+}
+
+#back{
+    z-index: 1;
+    padding: 0.7vh;
+    width: 4.2vh;
+    border-radius: 5px;
+    border: none;
+    background-color: black;
+    color: white;
+    font-size: 2.3vh;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.3);
+    margin-bottom: 1.4vh;
+}
+
+.calendar-day-name{
+    color: black;
+    text-shadow: 5px 5px 5px white;
+    font-weight: bold;
+    position: relative;
+    margin-top: 6.4vh;
+}
+
+.calendar-navigation button{
+    position: relative;
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 2.3vh;
+    cursor: pointer;
+    margin-top: 2.5vh;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.3);
+}
+
+
+.calendar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;}
+
+.firstday{
+    color: gray;
+}
+
+#menu button {
+    border-color: black;
+    box-shadow: inset 0 0 25px -5px black;
+    position: relative;
+    font-size: 5vh;
+    height: 100%;
+    cursor: pointer;
+    flex: 1;
+}
+
+#menu button:active{
+    border-color: black;
+    position: relative;
+    font-size: 5vh;
+    height: 100%;
+    text-shadow: 2px 2px 5px greenyellow;}
+
+#menu button:hover{
+    flex: 1.5;
+    background-color: black;
+}
+
+.used{
+    background-color: black;
+}
+
+#menu button:not(.used){
+    background:none;
+}
+
+/*search*/
+
+#engine {
+    position: relative;
+    
+}
+
+#topic{
+    font-size: 3.5vh;
+    font-weight: bold;
+    font-family: "Noto Serif Thai", serif;
+}
+
+::placeholder{
+    color: white;
+}
+
+#a{
+    font-size: 2.5vh;
+    font-family: "Noto Serif Thai", serif;
+}
+
+.searchbtn{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 3vh;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.3);
+}
+
+.okay {
+    box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.5);
+    background-color: rgba(172, 255, 47, 0.5);
+}
+
+#image{
+    width: 20vh;
+}
+
+#info{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vh;
+    align-items: center;
+    justify-content: center;
+}
+
+#back2{
+    z-index: 1;
+    padding: 0.7vh;
+    width: 4.2vh;
+    border-radius: 5px;
+    border: none;
+    background-color: black;
+    color: white;
+    font-size: 2.3vh;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.3);
+    margin-bottom: 1.4vh;
+}
+
+#column1{
+    background-color: rgba(255, 255, 255, 0.5);
+    border-color: white;
+    border-radius: 5%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 40vh;
+    align-items: center;
+    justify-content: center;
+}
+
+p{
+    font-family: "Noto Serif Thai",serif;
+    font-size: 1.75vh;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.a{
+    display: flex;
+    flex-direction: row;
+}
+
+.prop{
+    position: relative;
+    font-family: 'Noto Serif Thai',serif;
+    margin-top: 2vh;
+    font-size: 2vh;
+    flex: 1;
+}
+
+#prop{
+    color: blue;
+    width: 45vh;
+    position: fixed;
+    margin-top: 17.5vh;
+    display: flex;
+    flex-direction: row;
+}
